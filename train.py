@@ -130,9 +130,9 @@ class WaveGan_GP(object):
             save_samples(fake, first_iter)
         self.generator.train()
         self.discriminator.train()
-        for iter_indx in range(first_iter, n_iterations):
+        for iter_indx in tqdm(range(first_iter, n_iterations)):
             self.enable_disc_disable_gen()
-            for _ in range(n_critic):
+            for _ in tqdm(range(n_critic)):
                 real_signal = next(self.train_loader)
 
                 # need to add mixed signal and flag
