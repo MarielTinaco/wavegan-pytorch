@@ -7,7 +7,7 @@ import os
 #############################
 # DataSet Path
 #############################s
-target_signals_dir = '../../DataSet/mancini_piano/piano'
+target_signals_dir = 'horse_cough'
 #############################
 # Model Params
 #############################
